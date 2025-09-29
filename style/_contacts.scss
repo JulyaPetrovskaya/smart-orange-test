@@ -79,6 +79,13 @@
     line-height: 90%;
     letter-spacing: -4%;
     margin: 0 0 83px 0;
+      @media (max-width: 1200px) {
+        font-size: 64px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 48px;
+      }
   }
 
   &__block {

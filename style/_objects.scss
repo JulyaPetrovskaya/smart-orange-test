@@ -1,6 +1,13 @@
 .objects {
   padding: 100px 60px;
   background-color: var(--bg-page);
+    @media (max-width: 1200px) {
+      padding: 20px 20px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 10px 10px;
+    }
 
   .container {
     max-width: 1800px;
@@ -16,6 +23,13 @@
     letter-spacing: -4%;
     margin-bottom: 30px;
     text-align: left;
+      @media (max-width: 1200px) {
+        font-size: 32px;  
+      }
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
   }
 
   &__nav {
