@@ -26,12 +26,12 @@
   &__track {
     display: flex;
     height: 100%;
-    width: 200%; // Для 2-х слайдів
+    width: 200%;
     transition: transform 0.5s ease;
   }
 
   &__image {
-    width: 50%; // 100% / 2 слайди
+    width: 50%;
     height: 100%;
     object-fit: cover;
   }

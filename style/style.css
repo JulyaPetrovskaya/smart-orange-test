@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* --- Змінні та базові налаштування --- */
 :root {
   --text-primary: #0A0F13;
   --text-secondary: #555;
@@ -582,5 +581,3 @@ body .wrapper {
     transform: translateX(-50%);
   }
 }
-
-/*# sourceMappingURL=style.css.map */

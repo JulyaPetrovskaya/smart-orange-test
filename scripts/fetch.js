@@ -1,16 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // --- Ініціалізація змінних ---
   const API_URL = 'https://test.smarto.agency/smarto_complexes_list.json';
   const objectsContainer = document.getElementById('objects-container');
   const loadMoreButton = document.getElementById('load-more');
-  const navContainer = document.getElementById('objects-nav'); // Новий елемент
+  const navContainer = document.getElementById('objects-nav');
   
   const ITEMS_PER_PAGE = 3;
   let currentPage = 0;
-  let allObjects = [];       // Масив для ВСІХ об'єктів з сервера
-  let filteredObjects = [];  // Масив для відфільтрованих об'єктів
+  let allObjects = [];
+  let filteredObjects = [];
 
-  // --- Функції для рендерингу ---
   const createCardHTML = (object) => {
     const tagsHTML = object.tags.map(tag => `<span class="card__tag">${tag}</span>`).join('');
     return `
@@ -34,14 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const renderCards = () => {
-    // Визначаємо, скільки карток вже показано
     const renderedCount = objectsContainer.children.length;
     const objectsToRender = filteredObjects.slice(renderedCount, renderedCount + ITEMS_PER_PAGE);
 
     const pageHTML = objectsToRender.map(createCardHTML).join('');
     objectsContainer.innerHTML += pageHTML;
 
-    // Показуємо або ховаємо кнопку "Завантажити ще"
     if (objectsContainer.children.length >= filteredObjects.length) {
       loadMoreButton.style.display = 'none';
     } else {
@@ -49,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // --- Функції для фільтрації ---
   const filterObjects = (type) => {
     objectsContainer.innerHTML = '';
     currentPage = 0;
@@ -89,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // --- Головна функція завантаження ---
   const fetchData = async () => {
     try {
       const response = await fetch(API_URL);
@@ -106,7 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // --- Обробник для кнопки "Завантажити ще" ---
   loadMoreButton.addEventListener('click', renderCards);
 
   fetchData();

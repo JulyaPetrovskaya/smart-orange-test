@@ -10,14 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const dotsGroup = document.querySelector('.slider__dot-group');
 
-  //створюємо крапки відповідно до кількості слайдів
   for (let i = 0; i < slideCount; i++) {
     const dot = document.createElement('span');
     dot.classList.add('slider__dot');
     dotsGroup.appendChild(dot);
   }
 
-  // знаходимо крапки
   const dots = Array.from(dotsGroup.children);
 
   let currentSlideIndex = 0;
