@@ -1,0 +1,38 @@
+// --- Базові стилі та ресети ---
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+  background-color: var(--bg-page);
+
+  .wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: var(--bg-content);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.element-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}

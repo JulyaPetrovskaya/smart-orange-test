@@ -1,0 +1,118 @@
+.slider {
+  position: relative;
+  height: 468px;
+  color: var(--text-light);
+
+  &__logo {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    margin: 0;
+    font-size: 32.42px;
+    line-height: 90%;
+    letter-spacing: -4%;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+  }
+
+  &__viewport {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__track {
+    display: flex;
+    height: 100%;
+    width: 200%; // Для 2-х слайдів
+    transition: transform 0.5s ease;
+  }
+
+  &__image {
+    width: 50%; // 100% / 2 слайди
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 90%;
+    letter-spacing: -4%;
+    color: var(--text-light);
+    text-align: center;
+    margin: 0;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 24px;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 30px;
+    color: var(--text-light);
+    cursor: pointer;
+
+    &--prev {
+      left: 60px;
+    }
+    &--next {
+      right: 60px;
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    top: 429px;
+    left: 60px;
+    right: 60px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  &__dot-group {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+
+    &--active {
+      background-color: var(--text-primary);
+    }
+  }
+
+  &__line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #0A0F13;
+    opacity: 20%;
+  }
+
+  &__icon {
+    width: 16.2px;
+    height: 16.2px;
+    flex-shrink: 0;
+  }
+}

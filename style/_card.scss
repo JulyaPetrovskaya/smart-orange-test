@@ -1,0 +1,114 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--bg-page);
+  padding: 20px 12px 45px 12px;
+  border: 1px solid var(--border-color);
+  border-bottom: none;
+
+  // рваний край знизу
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25px;
+    background-image: url('../image/Down.png');
+    background-size: 100% 100%;
+    transform: translateY(100%);
+  }
+
+  // --- Елементи картки ---
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__year {
+    font-size: 20px;
+    font-weight: var(--font-weight-medium);
+    line-height: 120%;
+    letter-spacing: -2%;
+  }
+
+  &__type {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    padding: 4px 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 1000px;
+  }
+
+  &__pin {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 32px;
+    background-image: url('../image/Pin.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__body {
+    flex-grow: 1;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 120%;
+    letter-spacing: -2%;
+    margin-bottom: 10px;
+  }
+
+  &__address {
+    font-size: 20px;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-secondary);
+    line-height: 120%;
+    letter-spacing: -2%;
+  }
+
+  &__footer-title {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    line-height: 140%;
+    letter-spacing: -2%;
+    text-transform: uppercase;
+    color: var(--text-meta);
+    margin-bottom: 8px;
+  }
+
+  &__tags-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__tag {
+    background-color: var(--bg-tag);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    line-height: 140%;
+    letter-spacing: -2%;
+    text-transform: uppercase;
+  }
+}
