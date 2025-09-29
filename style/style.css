@@ -159,22 +159,11 @@ body .wrapper {
 .objects {
   background-color: var(--bg-page);
 }
-@media (max-width: 1200px) {
-  .objects {
-    padding: 20px 20px;
-  }
-}
-@media (max-width: 768px) {
-  .objects {
-    padding: 10px 10px;
-  }
-}
 .objects .container {
   box-sizing: border-box;
   max-width: 1920px;
   background-color: var(--bg-content);
-  padding: 100px 60px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin: 100px 60px;
 }
 .objects__title {
   font-size: 48px;
@@ -198,7 +187,6 @@ body .wrapper {
   display: flex;
   gap: 30px;
   margin-bottom: 40px;
-  border-bottom: 1px solid #e0e0e0;
 }
 .objects__nav-link {
   padding-bottom: 10px;
@@ -239,7 +227,7 @@ body .wrapper {
 }
 .objects__button {
   display: block;
-  margin: 40px auto 0;
+  margin: 100px auto 0;
 }
 
 .card {
