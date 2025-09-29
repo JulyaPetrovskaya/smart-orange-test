@@ -5,6 +5,13 @@
     max-width: 1920px;
     background-color: var(--bg-content);
     margin: 100px 60px;
+      @media (max-width: 1200px) {
+        margin: 50px 30px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
   }
 
   &__title {

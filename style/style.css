@@ -165,6 +165,16 @@ body .wrapper {
   background-color: var(--bg-content);
   margin: 100px 60px;
 }
+@media (max-width: 1200px) {
+  .objects .container {
+    margin: 50px 30px;
+  }
+}
+@media (max-width: 768px) {
+  .objects .container {
+    font-size: 24px;
+  }
+}
 .objects__title {
   font-size: 48px;
   font-weight: 500;
@@ -235,6 +245,7 @@ body .wrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
+  max-width: 440px;
   background-color: var(--bg-page);
   padding: 20px 12px 45px 12px;
   border: 1px solid var(--border-color);
