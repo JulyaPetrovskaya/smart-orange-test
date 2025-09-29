@@ -26,8 +26,7 @@
 
 1.  **Клонуйте репозиторій:**
     ```bash
-    git clone [https://github.com/JulyaPetrovskaya/smart-orange-test.git](https://github.com/JulyaPetrovskaya/smart-orange-test.git)
-    cd smart-orange-test
+    git clone https://github.com/JulyaPetrovskaya/smart-orange-test.git
     ```
 
 2.  **Встановіть залежності:**
