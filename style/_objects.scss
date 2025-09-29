@@ -1,5 +1,4 @@
 .objects {
-  padding: 100px 60px;
   background-color: var(--bg-page);
     @media (max-width: 1200px) {
       padding: 20px 20px;
@@ -10,9 +9,10 @@
     }
 
   .container {
-    max-width: 1800px;
+    box-sizing: border-box;
+    max-width: 1920px;
     background-color: var(--bg-content);
-    padding: 40px;
+    padding: 100px 60px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   }
 
